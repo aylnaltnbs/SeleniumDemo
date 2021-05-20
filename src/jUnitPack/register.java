@@ -35,6 +35,10 @@ public class register {
         driver.findElement(By.xpath("//input[@value='Male']")).click();
         driver.findElement(By.id("checkbox1")).click();	
         
+        WebElement UploadImg = driver.findElement(By.xpath("//input[@id='imagesrc']"));
+		UploadImg.sendKeys("D:\\uploadPhoto.PNG");
+		
+        
         WebElement SelectSkills =  driver.findElement(By.id("Skills"));
 		Select dropdownSkills= new Select(SelectSkills);
 		dropdownSkills.selectByIndex(5);
@@ -65,6 +69,7 @@ public class register {
 		Thread.sleep(1000);
 		driver.findElement(By.id("submitbtn")).click();	
 		Thread.sleep(5000);
+				
 		
 		driver.quit();  
 	}
